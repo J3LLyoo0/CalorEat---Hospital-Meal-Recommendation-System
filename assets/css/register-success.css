@@ -1,0 +1,98 @@
+/* Register Successful Popup */
+.register-modal-overlay {
+    position: fixed;
+    inset: 0;
+
+    background-color: rgba(0, 0, 0, 0.25);
+
+    display: none;
+    justify-content: center;
+    align-items: center;
+
+    z-index: 9999;
+}
+
+.register-modal-overlay.active {
+    display: flex;
+}
+
+.register-success-card {
+    width: 430px;
+    min-height: 220px;
+
+    background-color: #ffffff;
+    border-radius: 16px;
+
+    padding: 40px;
+
+    text-align: center;
+    color: #000666;
+}
+
+.register-success-title {
+    font-size: 35px;
+    font-weight: bold;
+    margin-bottom: 18px;
+    color: #000666;
+}
+
+.register-success-text {
+    font-size: 20px;
+    line-height: 1.4;
+    margin-bottom: 28px;
+    color: #000666;
+}
+
+.register-success-button {
+    width: 150px;
+    height: 36px;
+
+    border: none;
+    border-radius: 10px;
+
+    background-color: #CCCCFF;
+    color: #000666;
+
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.register-success-button:hover {
+    opacity: 0.75;
+}
+
+/* Register input error */
+.input-box.error,
+.password-input.error {
+    border: 2px solid #D2042D;
+    animation: shake 0.3s ease;
+}
+
+@keyframes shake {
+    0% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(-6px);
+    }
+
+    50% {
+        transform: translateX(6px);
+    }
+
+    75% {
+        transform: translateX(-6px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.success-icon {
+    width:90px;
+    height:90px;
+    object-fit:center;
+    margin-bottom:12px;
+}

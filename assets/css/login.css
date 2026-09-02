@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Inria+Serif:wght@400&family=Instrument+Serif:ital@0;1&family=Inter:wght@400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background-color: #ddeff6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    color: #000666;
+    overflow:hidden;
+}
+
+.login-container {
+    width: 1350px;
+    height: 630px;
+    background-color: #ffffff;
+    border-radius: 18px;
+    display: flex;
+    align-items: center;
+    padding: 60px;
+}
+
+.left-box {
+    width: 45%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-box {
+    width:310px;
+    height:300px;
+    overflow:hidden;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom:5px;
+}
+
+.logo {
+    width: 890px;
+    height: auto;
+    transform: scale(1.5);
+    transform-origin:center;
+    margin-bottom: 0px;
+}
+
+.system-name {
+    font-family: "Inria Serif", 'Times New Roman', serif;
+    font-size: 128px;
+    font-weight: normal;
+    color: #000666;
+}
+
+.middle-line {
+    width: 3px;
+    height: 100%;
+    background-color: #000000;
+    margin: 0 70px;
+}
+
+.right-box {
+    width: 55%;
+    display: flex;
+    justify-content: center;
+}
+
+.login-form {
+    width: 495px;
+}
+
+.login-title {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    line-height: 1.2;
+    color: #000666;
+}
+
+.input-box {
+    width: 100%;
+    height: 63px;
+    border: 2px solid #333333;
+    border-radius: 10px;
+    margin-bottom: 22px;
+    text-align: center;
+    font-size: 18px;
+    color: #000666;
+    outline: none;
+}
+
+.input-box::placeholder {
+    color: #999999;
+}
+
+.password-section {
+    position: relative;
+    width:100%;
+}
+
+.password-wrapper {
+    position:relative;
+    width:100%;
+}
+
+.password-wrapper .input-box {
+    padding-right:50px;
+    padding-left:50px;
+    margin-bottom: 10px;
+}
+
+.toggle-password {
+    position:absolute;
+    right:14px;
+    top:50%;
+    transform: translateY(-80%);
+    width:24px;
+    height:24px;
+    border:none;
+    background:transparent;
+    cursor:pointer;
+    padding:0;
+}
+
+.toggle-password img{
+    width:100%;
+    height:100%;
+    object-fit:contain;
+}
+
+.forgot-link {
+    display: block;
+    width:fit-content;
+
+    margin-left:auto;
+    margin-top: -5px;
+    margin-bottom: 20px;
+
+    border:none;
+    background:transparent;
+    padding:0;
+
+    font-size:15px;
+    color:#000066;
+    text-decoration: none;
+    cursor:pointer;
+    font-family: Arial, sans-serif;
+}
+
+.forgot-link:hover {
+    text-decoration: underline;
+}
+
+.button-area {
+    text-align: center;
+}
+
+.login-button {
+    width: 225px;
+    height: 51px;
+    border: none;
+    border-radius: 14px;
+    background-color: #CCCCFF;
+    color: #000666;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.login-button:hover {
+    opacity: 0.85;
+}
+
+.register-text {
+    text-align: center;
+    font-size: 14px;
+    margin-top: 27px;
+    color: #000666;
+}
+
+.register-text a {
+    color: #000666;
+    text-decoration: none;
+}
+
+.register-text a:hover {
+    text-decoration: underline;
+}

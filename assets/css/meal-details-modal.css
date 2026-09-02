@@ -1,0 +1,726 @@
+/* ========================================
+   MEAL INFORMATION MODAL
+======================================== */
+
+.meal-details-card {
+    position: relative;
+
+    width: min(1120px, 95vw);
+    max-height: 92vh;
+    overflow-y: auto;
+
+    padding: 26px 34px 32px;
+    box-sizing: border-box;
+
+    border-radius: 13px;
+    background-color: #ffffff;
+}
+
+.meal-details-title {
+    margin: 0 60px 24px 0;
+
+    color: #000066;
+    font-size: 90px;
+    font-weight: 500;
+    line-height: 1.1;
+    text-align: left;
+    overflow-wrap: anywhere;
+}
+
+.meal-details-close {
+    top: 12px;
+    right: 19px;
+
+    color: #111111;
+    font-size: 42px;
+    font-weight: 300;
+}
+
+.meal-details-layout {
+    display: grid;
+    grid-template-columns:
+        minmax(0, 1.25fr)
+        minmax(340px, 0.9fr);
+
+    gap: 25px;
+    align-items: start;
+}
+
+/* ========================================
+   LEFT IMAGE AREA
+======================================== */
+
+.meal-visual-panel {
+    min-width: 0;
+}
+
+.meal-details-image-box {
+    width: 100%;
+    height: 420px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+    border: 1px solid #7d7d8f;
+    background-color: #f3f3f3;
+}
+
+.meal-details-image-box img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+    object-fit: cover;
+}
+
+.meal-details-image-box img.is-missing {
+    display: none;
+}
+
+.meal-meta-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+
+    margin-top: 13px;
+    padding: 12px 15px;
+
+    border-radius: 9px;
+    background-color: #f1f8fb;
+}
+
+.meal-meta-row span {
+    color: #555577;
+    font-size: 16px;
+}
+
+.meal-meta-row strong {
+    color: #000066;
+    font-size: 20px;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+/* ========================================
+   RIGHT INFORMATION AREA
+======================================== */
+
+.meal-information-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+
+    min-width: 0;
+}
+
+.meal-information-box {
+    padding: 15px 17px;
+
+    border: 1px solid #555566;
+    border-radius: 9px;
+
+    background-color: #ffffff;
+    box-sizing: border-box;
+}
+
+.meal-information-box h3 {
+    margin: 0 0 11px;
+
+    color: #000066;
+    font-size: 23px;
+    font-weight: 500;
+    text-decoration: underline;
+    text-underline-offset: 5px;
+}
+
+.ingredients-information-box {
+    min-height: 195px;
+}
+
+.meal-ingredients-list {
+    max-height: 180px;
+    overflow-y: auto;
+
+    margin: 0;
+    padding-left: 24px;
+    padding-right: 8px;
+}
+
+.meal-ingredients-list li {
+    margin-bottom: 5px;
+
+    color: #000066;
+    font-size: 17px;
+    line-height: 1.3;
+}
+
+.description-information-box {
+    min-height: 125px;
+}
+
+.description-information-box p {
+    max-height: 130px;
+    overflow-y: auto;
+
+    margin: 0;
+    padding-right: 7px;
+
+    color: #222255;
+    font-size: 16px;
+    line-height: 1.5;
+    white-space: pre-wrap;
+}
+
+/* ========================================
+   PATIENT SELECTION AREA
+======================================== */
+
+.meal-patient-selection {
+    padding-top: 3px;
+}
+
+.meal-patient-selection h3 {
+    margin: 0 0 9px;
+
+    color: #000066;
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.meal-patient-selection select {
+    width: 100%;
+    height: 45px;
+
+    padding: 8px 12px;
+    margin-bottom: 13px;
+
+    border: 1px solid #555566;
+    border-radius: 9px;
+
+    background-color: #ffffff;
+    color: #000066;
+
+    font-family: inherit;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.meal-patient-selection select:focus {
+    outline: 3px solid #ccccff;
+    border-color: #000066;
+}
+
+.assign-meal-button {
+    width: 100%;
+    min-height: 43px;
+
+    padding: 9px 18px;
+
+    border: none;
+    border-radius: 11px;
+
+    background-color: #ccccff;
+    color: #000066;
+
+    font-family: inherit;
+    font-size: 19px;
+    cursor: pointer;
+}
+
+.assign-meal-button:hover {
+    filter: brightness(0.96);
+}
+
+.assign-meal-button:active {
+    transform: scale(0.98);
+}
+
+.assign-meal-button:disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+.meal-assignment-message {
+    min-height: 21px;
+    margin: 10px 0 0;
+
+    color: #000066;
+    font-size: 15px;
+    line-height: 1.35;
+    text-align: center;
+}
+
+/* ========================================
+   RESPONSIVE
+======================================== */
+
+@media (max-width: 850px) {
+    .meal-details-title {
+        margin-right: 0 45px 20px 0;
+        font-size: 36px;
+        text-align: center;
+    }
+
+    .meal-details-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .meal-details-image-box {
+        height: 360px;
+    }
+}
+
+@media (max-width: 550px) {
+    .meal-details-title {
+        font-size: 30px;
+    }
+    
+    .meal-details-card {
+        padding: 25px 18px;
+    }
+
+    .meal-details-image-box {
+        height: 270px;
+    }
+
+    .meal-meta-row {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .meal-information-box h3,
+    .meal-patient-selection h3 {
+        font-size: 20px;
+    }
+}
+
+#mealModal #modalMealName.meal-details-title {
+    margin: 0 60px 24px 0;
+
+    color: #000066;
+
+    font-family: "Instrument Serif", Georgia, 'Times New Roman', serif;
+    font-size: 48px !important;
+    font-weight: 400;
+    line-height: 1.1;
+
+    text-align: left;
+    overflow-wrap: anywhere;
+}
+
+/* ========================================
+   MEAL RECOMMENDATION
+======================================== */
+
+.meal-selection-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 13px;
+}
+
+.meal-selection-field {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.meal-selection-field > span {
+    color: #000066;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.meal-selection-field select {
+    width: 100%;
+    height: 43px;
+    margin: 0;
+    padding: 7px 10px;
+
+    border: 1px solid #555566;
+    border-radius: 8px;
+
+    background-color: #ffffff;
+    color: #000066;
+
+    font-family: inherit;
+    font-size: 15px;
+    box-sizing: border-box;
+}
+
+.check-suitability-button,
+.recommend-meal-button {
+    width: 100%;
+    min-height: 42px;
+
+    margin-top: 13px;
+    padding: 9px 16px;
+
+    border: none;
+    border-radius: 10px;
+
+    background-color: #ccccff;
+    color: #000066;
+
+    font-family: inherit;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+.check-suitability-button:hover,
+.recommend-meal-button:hover:not(:disabled) {
+    filter: brightness(0.96);
+}
+
+.recommend-meal-button:disabled {
+    cursor: not-allowed;
+    opacity: 0.55;
+}
+
+.meal-recommendation-result {
+    margin-top: 13px;
+    padding: 14px;
+
+    border: 1px solid #a0a0b5;
+    border-radius: 9px;
+
+    background-color: #f8fbfc;
+}
+
+.meal-recommendation-result h4 {
+    margin: 0 0 7px;
+
+    color: #000066;
+    font-size: 19px;
+    font-weight: 500;
+}
+
+.meal-recommendation-result > p {
+    margin: 0;
+
+    color: #444466;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.meal-recommendation-result.is-recommended {
+    border-color: #6a9960;
+    background-color: #f2faef;
+}
+
+.meal-recommendation-result.is-review {
+    border-color: #b79c4c;
+    background-color: #fffbed;
+}
+
+.meal-recommendation-result.is-blocked {
+    border-color: #b85c5c;
+    background-color: #fff2f2;
+}
+
+.recommendation-calorie-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 8px;
+
+    margin-top: 12px;
+}
+
+.recommendation-calorie-grid > div {
+    padding: 8px;
+
+    border-radius: 7px;
+    background-color: #ffffff;
+}
+
+.recommendation-calorie-grid span {
+    display: block;
+    margin-bottom: 4px;
+
+    color: #666677;
+    font-size: 12px;
+}
+
+.recommendation-calorie-grid strong {
+    display: block;
+
+    color: #000066;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.recommendation-reasons {
+    margin: 11px 0 0;
+    padding-left: 21px;
+
+    color: #333355;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.recommendation-reasons:empty {
+    display: none;
+}
+
+.suggested-meal-box {
+    margin-top: 12px;
+    padding: 11px;
+
+    border: 1px solid #9a9ab0;
+    border-radius: 8px;
+
+    background-color: #ffffff;
+}
+
+.suggested-meal-box > span {
+    display: block;
+    margin-bottom: 4px;
+
+    color: #666677;
+    font-size: 13px;
+}
+
+.suggested-meal-box > strong {
+    display: block;
+
+    color: #000066;
+    font-size: 17px;
+    font-weight: 500;
+}
+
+.suggested-meal-box p {
+    margin: 5px 0 10px;
+
+    color: #444466;
+    font-size: 14px;
+}
+
+.suggested-meal-box button {
+    padding: 7px 14px;
+
+    border: none;
+    border-radius: 8px;
+
+    background-color: #ddeff6;
+    color: #000066;
+
+    font-family: inherit;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.meal-assignment-message {
+    min-height: 20px;
+    margin: 9px 0 0;
+
+    color: #000066;
+    font-size: 14px;
+    line-height: 1.35;
+    text-align: center;
+}
+
+/* Make space for the new recommendation area */
+
+.ingredients-information-box {
+    min-height: 155px;
+}
+
+.meal-ingredients-list {
+    max-height: 125px;
+}
+
+.description-information-box {
+    min-height: 105px;
+}
+
+.description-information-box p {
+    max-height: 95px;
+}
+
+@media (max-width: 600px) {
+    .meal-selection-grid,
+    .recommendation-calorie-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ========================================
+   PATIENT RECOMMENDATIONS
+======================================== */
+
+.patient-recommendations-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+
+    margin-bottom: 15px;
+}
+
+.patient-recommendations-heading h4 {
+    margin: 0;
+}
+
+.patient-recommendations-heading > span {
+    color: #666677;
+    font-size: 14px;
+    white-space: nowrap;
+}
+
+.patient-recommendations-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    max-height: 360px;
+    overflow-y: auto;
+
+    padding-right: 7px;
+}
+
+.patient-recommendation-placeholder {
+    margin: 0;
+    padding: 24px;
+
+    border-radius: 9px;
+    background-color: #f8fbfc;
+
+    color: #666677;
+    font-size: 15px;
+    text-align: center;
+}
+
+.patient-recommendation-card {
+    display: grid;
+    grid-template-columns: 90px minmax(0, 1fr);
+    gap: 15px;
+
+    padding: 12px;
+
+    border: 1px solid #b8b8c9;
+    border-radius: 10px;
+
+    background-color: #ffffff;
+}
+
+.patient-recommendation-image {
+    width: 90px;
+    height: 90px;
+
+    overflow: hidden;
+
+    border-radius: 8px;
+    background-color: #eef4f6;
+}
+
+.patient-recommendation-image img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+    object-fit: cover;
+}
+
+.patient-recommendation-image.is-missing::after {
+    content: "No image";
+
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #777788;
+    font-size: 12px;
+}
+
+.patient-recommendation-content {
+    min-width: 0;
+}
+
+.patient-recommendation-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+.patient-recommendation-top h5 {
+    margin: 0;
+
+    color: #000066;
+    font-size: 19px;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+.patient-recommendation-time {
+    flex: 0 0 auto;
+
+    padding: 4px 9px;
+
+    border-radius: 20px;
+    background-color: #ddeff6;
+
+    color: #000066;
+    font-size: 13px;
+}
+
+.patient-recommendation-category {
+    margin: 5px 0 9px;
+
+    color: #666677;
+    font-size: 14px;
+}
+
+.patient-recommendation-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px 14px;
+
+    color: #333355;
+    font-size: 14px;
+}
+
+.patient-recommendation-type {
+    text-transform: capitalize;
+}
+
+.patient-recommendation-result {
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+.patient-recommendation-result.recommended {
+    color: #477d3d;
+}
+
+.patient-recommendation-result.review {
+    color: #92751c;
+}
+
+.patient-recommendation-date {
+    margin: 9px 0 0;
+
+    color: #777788;
+    font-size: 12px;
+}
+
+@media (max-width: 600px) {
+    .patient-recommendation-card {
+        grid-template-columns: 1fr;
+    }
+
+    .patient-recommendation-image {
+        width: 100%;
+        height: 180px;
+    }
+
+    .patient-recommendation-top {
+        flex-direction: column;
+        gap: 7px;
+    }
+}

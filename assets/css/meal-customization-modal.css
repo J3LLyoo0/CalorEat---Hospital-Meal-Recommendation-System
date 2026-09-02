@@ -1,0 +1,308 @@
+.meal-customization-card {
+    width: min(1180px, 96vw);
+    max-height: 94vh;
+    overflow-y: auto;
+    padding: 28px 34px 32px;
+    box-sizing: border-box;
+}
+
+.meal-customization-card > h2 {
+    margin: 0 55px 24px;
+    color: #000066;
+    font-size: 38px;
+    font-weight: 500;
+    text-align: center;
+}
+
+.meal-customization-close {
+    top: 11px;
+    right: 18px;
+    font-size: 42px;
+}
+
+.meal-customization-layout {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+    align-items: start;
+}
+
+.meal-customization-panel {
+    min-width: 0;
+    padding: 20px;
+    border: 1px solid #9b9bad;
+    border-radius: 12px;
+    background-color: #ffffff;
+}
+
+.meal-customization-panel > h3 {
+    margin: 0 0 18px;
+    color: #000066;
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.meal-customization-grid {
+    display: grid;
+    gap: 16px;
+}
+
+.meal-customization-grid.two-columns {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.meal-customization-field {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    margin-bottom: 16px;
+}
+
+.meal-customization-field > span {
+    color: #000066;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.meal-customization-field input,
+.meal-customization-field select,
+.meal-customization-field textarea {
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0;
+    border: 1px solid #777788;
+    border-radius: 8px;
+    background-color: #ffffff;
+    color: #111144;
+    font-family: inherit;
+    font-size: 15px;
+}
+
+.meal-customization-field input,
+.meal-customization-field select {
+    height: 42px;
+    padding: 7px 11px;
+}
+
+.meal-customization-field textarea {
+    min-height: 90px;
+    padding: 10px 11px;
+    resize: vertical;
+}
+
+.meal-customization-field input:focus,
+.meal-customization-field select:focus,
+.meal-customization-field textarea:focus {
+    outline: 3px solid #ccccff;
+    border-color: #000066;
+}
+
+.meal-customization-field select:disabled {
+    background-color: #eeeeee;
+    cursor: not-allowed;
+}
+
+.custom-patient-summary {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+    margin: 2px 0 18px;
+}
+
+.custom-patient-summary > div {
+    min-width: 0;
+    padding: 11px 12px;
+    border-radius: 8px;
+    background-color: #f1f8fb;
+}
+
+.custom-patient-summary span {
+    display: block;
+    margin-bottom: 4px;
+    color: #666677;
+    font-size: 12px;
+}
+
+.custom-patient-summary strong {
+    display: block;
+    color: #000066;
+    font-size: 14px;
+    font-weight: 500;
+    overflow-wrap: anywhere;
+}
+
+.custom-base-meal-preview {
+    display: grid;
+    grid-template-columns: 190px minmax(0, 1fr);
+    gap: 16px;
+    min-height: 210px;
+    padding: 13px;
+    border: 1px solid #b4b4c3;
+    border-radius: 10px;
+    background-color: #f8fbfc;
+}
+
+.custom-base-image {
+    height: 190px;
+    overflow: hidden;
+    border-radius: 8px;
+    background-color: #e9eef0;
+}
+
+.custom-base-image img {
+    width: 100%;
+    height: 100%;
+    display: none;
+    object-fit: cover;
+}
+
+.custom-base-image img.has-image {
+    display: block;
+}
+
+.custom-base-information {
+    min-width: 0;
+}
+
+.custom-base-information h4 {
+    margin: 0 0 5px;
+    color: #000066;
+    font-size: 21px;
+    font-weight: 500;
+}
+
+.custom-base-information > p {
+    margin: 0 0 11px;
+    color: #555577;
+    font-size: 16px;
+}
+
+.custom-base-information > span {
+    display: block;
+    margin-bottom: 5px;
+    color: #666677;
+    font-size: 13px;
+}
+
+.custom-base-information ul {
+    max-height: 125px;
+    overflow-y: auto;
+    margin: 0;
+    padding-left: 20px;
+    color: #222255;
+    font-size: 14px;
+    line-height: 1.35;
+}
+
+.custom-check-button,
+.custom-save-button {
+    width: 100%;
+    min-height: 43px;
+    padding: 9px 17px;
+    border: none;
+    border-radius: 10px;
+    background-color: #ccccff;
+    color: #000066;
+    font-family: inherit;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+.custom-check-button:hover,
+.custom-save-button:hover:not(:disabled) {
+    filter: brightness(0.96);
+}
+
+.custom-save-button {
+    margin-top: 13px;
+}
+
+.custom-save-button:disabled {
+    cursor: not-allowed;
+    opacity: 0.55;
+}
+
+.custom-suitability-result {
+    margin-top: 13px;
+    padding: 13px 14px;
+    border: 1px solid #aaaabc;
+    border-radius: 9px;
+    background-color: #f8fbfc;
+}
+
+.custom-suitability-result.is-recommended {
+    border-color: #6a9960;
+    background-color: #f2faef;
+}
+
+.custom-suitability-result.is-review {
+    border-color: #b79c4c;
+    background-color: #fffbed;
+}
+
+.custom-suitability-result.is-blocked {
+    border-color: #b85c5c;
+    background-color: #fff2f2;
+}
+
+.custom-suitability-result h4 {
+    margin: 0 0 6px;
+    color: #000066;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.custom-suitability-result p {
+    margin: 0;
+    color: #444466;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.custom-suitability-result ul {
+    margin: 9px 0 0;
+    padding-left: 20px;
+    color: #333355;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.custom-suitability-result ul:empty {
+    display: none;
+}
+
+.custom-save-message {
+    min-height: 20px;
+    margin: 9px 0 0;
+    color: #000066;
+    font-size: 14px;
+    text-align: center;
+}
+
+@media (max-width: 900px) {
+    .meal-customization-layout {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 620px) {
+    .meal-customization-card {
+        padding: 26px 18px;
+    }
+
+    .meal-customization-card > h2 {
+        margin-left: 35px;
+        margin-right: 35px;
+        font-size: 29px;
+    }
+
+    .meal-customization-grid.two-columns,
+    .custom-patient-summary,
+    .custom-base-meal-preview {
+        grid-template-columns: 1fr;
+    }
+
+    .custom-base-image {
+        height: 220px;
+    }
+}
